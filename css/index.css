@@ -1,0 +1,432 @@
+/*
+* @Author: 12574
+* @Date:   2018-07-04 18:53:32
+* @Last Modified by:   12574
+* @Last Modified time: 2018-07-10 09:17:15
+*/
+
+/*头部开始*/
+.header {
+	height: 80px;
+	background-color: #f7f7f7;
+}
+.header-wrapper {
+	max-width: 1200px;
+	height: 80px;
+	margin: 0 auto;
+	position: relative;
+}
+.header-logo {
+	position: absolute;
+	left: 20px;
+	top: 50%;
+	margin-top: -19px;
+	width: 150px;
+	height: 38px;
+	line-height: 38px;
+	color: #07111b;
+	font-size: 20px;
+	background: url(../img/logo.png) left center no-repeat;
+	background-size: 38px 38px;
+	text-indent: 50px;
+}
+.header-nav {
+	position: absolute;
+	right: 30px;
+	height: 38px;
+	top: 50%;
+	margin: -19px;
+}
+.header-nav-item {
+	color: #292f35;
+	font-size: 14px;
+	display: block;
+	float: left;
+	height: 38px;
+	width: 30px;
+	text-align: center;
+	line-height: 38px;
+	padding-left: 40px;
+	position: relative;
+}
+.header-nav-item:hover {
+	color: #f01400;
+}
+/*.nav-active {
+	color: #f01400;
+}
+.nav-active::after {
+	content: " ";
+	display: block;
+	width: 100%;
+	height: 2px;
+	position: absolute;
+	background-color: #f01400;
+	left: 0;
+	bottom: 0;
+}*/
+.nav-buy {
+	width: 90px;
+	background-color: #000;
+	color: #f4f4f5;
+	border-radius: 5px;
+	text-align: center;
+	padding: 0;
+	margin-left: 40px;
+}
+/*头部结束*/
+
+/*第一屏开始*/
+.firstscreen {
+	height: 800px;
+	background-color: #e7e7e7;
+	background: url(../img/bg-screen-1.png) center no-repeat;
+	position: relative;
+	overflow: hidden;    /*清楚浮动，创建BFC,触发BFC模式*/
+	background-size: cover;
+}
+.firstscreen-heading {
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+	font-size: 46px;
+	color: #4d555d;
+	text-align: center;
+	padding-top: 152px;
+}
+.firstscreen-heading span {
+	color: #f01400;
+}
+.firstscreen-phone {
+	width: 1375px;
+	height: 305px;
+	position: absolute;
+	left: 50%;
+	margin-left: -687px;
+	bottom: 180px;
+	background: url(../img/screen-1-phone.png) center no-repeat;
+	z-index: 2;
+}
+.firstscreen-phone-shadow {
+	width: 1233px;
+	height: 411px;
+	position: absolute;
+	left: 50%;
+	margin-left: -616px;
+	bottom: 30px;
+	background: url(../img/screen-1-shadow.png) center no-repeat;
+	z-index: 1;
+	opacity: .8;
+}
+/*第一屏结束*/
+
+/*第二屏开始*/
+.secondscreen {
+	position: relative;
+	height: 800px;
+	background-color: #fafafa;
+	overflow: hidden;
+}
+.secondscreen-heading {
+	font-weight: normal;
+	font-size: 46px;
+	line-height: 46px;
+	color: #f01400;
+	text-align: center;
+	padding-top: 96px;
+}
+.secondscreen-subheading {
+	font-weight: normal;
+	font-size: 14px;
+	color: #2c3137;
+	text-align: center;
+	padding-top: 25px;
+	line-height: 28px;
+}
+.secondscreen-phone {
+	width: 928px;
+	height: 873px;
+	position: absolute;
+	left: 50%;
+	margin-left: -464px;
+	bottom: -345px;
+	background: url(../img/bg-screen-2.png) center no-repeat;
+}
+.secondscreen-point-left {
+	width: 108px;
+	padding-right: 112px;
+	font-size: 22px;
+	line-height: 22px;
+	color: #4d555d;
+	position: absolute;
+	background: url(../img/icon-point-right.png) no-repeat center right;
+}
+.secondscreen-point-right {
+	padding-left: 112px;
+	width: 108px;
+	font-size: 22px;
+	line-height: 22px;
+	color: #4d555d;
+	position: absolute;
+	background: url(../img/icon-point-left.png) no-repeat center left;
+}
+.secondscreen-point-desc1 {
+	top: 150px;
+	left: -164px;
+}
+.secondscreen-point-desc2 {
+	top: 30px;
+	right: 130px;
+
+}
+.secondscreen-point-desc3 {
+	top: 330px;
+	right: 30px;
+}
+/*第二屏结束*/
+
+/*第三屏开始*/
+.thirdscreen {
+	background-color: #a71316;
+	height: 800px;
+	overflow: hidden;
+}
+.thirdscreen-wrapper {
+	position: relative;
+	max-width: 1200px;
+	max-height: 800px;
+	margin: 0 auto;
+}
+.thirdscreen-heading {
+	position: absolute;
+	left: 10px;
+	top: 90px;
+	color: #fff;
+	font-size: 36px;
+	
+}
+.thirdscreen-subheading {
+	color: #fff;
+	position: absolute;
+	left: 10px;
+	top: 170px;
+	font-size: 16px;
+}
+.thirdscreen-desc-box {
+	width: 328px;
+	height: 288px;
+	position: absolute;
+	left: 5px;
+	top: 332px;
+}
+.thirdscreen-desc-box-item {
+	float: left;
+	width: 138px;
+	height: 118px;
+	border: 1px solid;
+	border-color: rgb(217,113,115);
+	color: #fff;
+	text-align: center;
+	font-size: 14px;
+	margin: 0 24px 24px 0;
+}
+.thirdscreen-desc-box-item span {
+	font-size: 36px;
+	line-height: 36px;
+	display: block;
+	height: 36px;
+	padding: 32px 0 9px 0;
+}
+.thirdscreen-phone {
+	width: 729px;
+	height: 900px;
+	position: absolute;
+	left: 465px;
+	top: 200px;
+	background: url(../img/bg-screen-3.png) no-repeat;
+}
+/*第三屏结束*/
+
+/*第四屏开始*/
+.forthscreen {
+	height: 800px;
+}
+.forthscreen-wrapper {
+	max-width: 1200px;
+    min-width: 800px;
+    position: relative;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.forthscreen-heading {
+	font-size: 36px;
+	color: #f01400;
+	text-align: center;
+	padding-top: 80px;
+}
+.forthscreen-subheading {
+	font-size: 16px;
+	padding-top: 44px;
+	text-align: center;
+}
+.forthscreen-phone-type {
+	width: 1300px;
+	height: 270px;
+	margin-left: 30px;
+	position: absolute;
+	bottom: 220px;
+	font-size: 16px;
+	text-align: center;
+}
+.type-img {
+	position: relative;
+	margin-right: 90px;
+	width: 220px;
+	height: 270px;
+	float: left;
+}
+.type-img-item1 {
+	background: url(../img/phone-1.png) no-repeat;
+}
+.type-img-item2 {
+	background: url(../img/phone-2.png) no-repeat;
+}
+.type-img-item3 {
+	background: url(../img/phone-3.png) no-repeat;
+}
+.type-img-item4 {
+	background: url(../img/phone-4.png) no-repeat;
+}
+.phone-color {
+	width: 100%;
+	position: absolute;
+	top: 300px;
+	height: 16px;
+	line-height: 16px;
+	font-size: 16px;
+	color: rgb(44,50,56);
+}
+.phone-storage {
+	width: 100%;
+	position: absolute;
+	top: 328px;
+	font-size: 9px;
+	height: 9px;
+	color: rgb(147,153,159);
+}
+/*第四屏结束*/
+
+/*第五屏开始*/
+.fifthscreen {
+	height: 800px;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+	background-color: #D9DDE1;
+}
+.fifthscreen-bg {
+	height: 433px;
+	width: 100%;
+	background: url(../img/bg-screen-5.png) no-repeat center bottom / cover;
+	position: absolute;
+	bottom: -100px;
+}
+/*.fifthscreen-wrapper {
+	max-width: 1200px;
+	min-width: 800px;
+	height: 100%;
+	position: relative;
+	margin: 0 auto;
+	overflow: hidden;
+}*/
+.fifthscreen-heading {
+	position: absolute;
+	top: 130px;
+	width: 100%;
+	font-size: 42px;
+	color: rgb(240, 20, 20);
+}
+.fifthscreen-subheading {
+	font-size: 16px;
+	position: absolute;
+	top: 250px;
+	width: 100%;
+}
+.fifthscreen-photo {
+	width: 100%;
+	height: 370px;
+	position: absolute;
+	bottom: -60px;
+	background: url(../img/bg-screen-5.png) center bottom / cover no-repeat;
+}
+/*第五屏结束*/
+
+/*购买*/
+.buy {
+	height: 80px;
+	padding: 120px 0;
+	background: url(../img/bg-screen-buy.png) no-repeat center bottom;
+}
+.btn-buy {
+	display: block;
+	width: 240px;
+	height: 80px;
+	line-height: 80px;
+	background-color: rgb(240, 20, 20);
+	border-radius: 5px;
+	color: #fff;
+	text-align: center;
+	font-size: 24px;
+	margin: 0 auto;
+}
+/*购买结束*/
+
+/*footer*/
+.footer {
+	height: 80px;
+	line-height: 80px;
+	text-align: center;
+	background-color: rgb(7, 17, 27);
+	color: #fff;
+}
+
+.outline {
+	position: fixed;
+	padding: 5px 10px;
+	bottom: 120px;
+	right: 0;
+	z-index: 3;
+	background-color: #fff;
+	box-shadow: 0 4px 12px rgba(0,0,0,.5);
+}
+.outline-item {
+	display: block;
+	width: 40px;
+	height: 30px;
+	line-height: 30px;
+	background-color: #fff;
+	color: #93999f;
+	padding: 5px 0;
+	margin-top: 5px;
+	border-top: 1px solid #eee;
+	text-align: center;
+}
+.outline-item:first-child {
+	border: none;
+}
+.outline-item-active {
+	color: red;
+}
+
+/*滑动门效果*/
+.nav-item-tip {
+	position: absolute;
+	width: 30px;
+	height: 2px;
+	background-color: #f01400;
+	bottom: 0;
+	left: 0;
+	margin-left: 40px;
+	transition: all .5s
+}

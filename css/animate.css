@@ -1,0 +1,247 @@
+/*
+* @Author: 12574
+* @Date:   2018-07-05 14:53:00
+* @Last Modified by:   12574
+* @Last Modified time: 2018-07-06 10:48:34
+*/
+
+/*第一屏动画*/
+.firstscreen-phone,
+.firstscreen-phone-shadow,
+.firstscreen-heading {
+	transition: all 1s;
+}
+.firstscreen-heading-animate-init {
+	opacity: 0;
+	transform: translate(0,100%);    /*(0,100%)从Y轴上下变化*/
+}
+.firstscreen-phone-animate-init {
+	opacity: 0;
+	transform: translate(0,-100%);
+}
+.firstscreen-phone-shadow-animate-init,{
+	opacity: 0;
+	transform: translate(0,100%);
+}
+.firstscreen-phone-animate-done,
+.firstscreen-phone-shadow-animate-done,
+.firstscreen-heading-animate-done {
+	opacity: 1;
+	transform: translate(0,0);
+}
+
+/*第二屏动画*/
+.secondscreen-heading,
+.secondscreen-subheading,
+.secondscreen-phone {
+	transition: all 1s;
+}
+
+.secondscreen-heading-animate-init {
+	opacity: 0;
+	transform: translate(0,-100%);
+}
+.secondscreen-subheading-animate-init {
+	opacity: 0;
+	transform: translate(0,100%);
+}
+.secondscreen-phone-animate-init {
+	opacity: 0;
+	transform: translate(0,50%);
+}
+.secondscreen-point-left,
+.secondscreen-point-right {
+	transition: all 1s 1s;
+}
+.secondscreen-point-left-animate-init,
+.secondscreen-point-right-animate-init {
+	opacity: 0;
+	transform: translate(-100%,0);     /*(-100%,0)从X轴左右变化*/
+}
+.secondscreen-point-desc1-animate-init {
+	opacity: 0;
+	transform: translate(-100%,0);
+}
+.secondscreen-point-desc2-animate-init,
+.secondscreen-point-desc3-animate-init {
+	opacity: 0;
+	transform: translate(100%,0);
+}
+.secondscreen-point-left-animate-done,
+.secondscreen-point-right-animate-done {
+	opacity: 1;
+	transform: translate(0,0);
+}
+.secondscreen-phone-animate-done,
+.secondscreen-subheading-animate-done,
+.secondscreen-heading-animate-done {
+	opacity: 1;
+	transform: translate(0,0);
+}
+
+/*第三屏动画*/
+.thirdscreen-desc-box,
+.thirdscreen-heading,
+.thirdscreen-subheading,
+.thirdscreen-phone {
+	transition: all 1s;
+}
+.thirdscreen-heading-animate-init {
+	opacity: 0;
+	transform: translate(0,-100%);
+}
+.thirdscreen-phone-animate-init,
+.thirdscreen-subheading-animate-init {
+	opacity: 0;
+	transform: translate(0,100%);
+}
+.thirdscreen-desc-box-animate-init {
+	opacity: 0;
+	transform: scale(.5);
+}
+.thirdscreen-desc-box-animate-done {
+	opacity: 1;
+	transform: scale(1);
+}
+.thirdscreen-desc-box-item {
+	transition: all .5s;
+}
+.thirdscreen-desc-box-item:hover {
+	transform: scale(1.1);
+	border-color: #fff;
+}
+.thirdscreen-phone-animate-done,
+.thirdscreen-subheading-animate-done,
+.thirdscreen-heading-animate-done {
+	opacity: 1;
+	transform: translate(0,0);
+}
+
+/*第四屏动画*/
+.forthscreen-heading,
+.forthscreen-subheading,
+.forthscreen-phone-type {
+	transition: all 1s;
+}
+.forthscreen-heading-animate-init {
+	opacity: 0;
+	transform: translate(0,-100%);
+}
+.forthscreen-subheading-animate-init {
+	opacity: 0;
+	transform: translate(0,100%);
+}
+.type-img-item1 {
+	transition: all 1s .5s;
+}
+.type-img-item2 {
+	transition: all 1s 1s;
+}
+.type-img-item3{
+	transition: all 1s 1.5s;
+}
+.type-img-item4{
+	transition: all 1s 2s;
+}
+.type-img-item1-animate-init ,
+.type-img-item2-animate-init ,
+.type-img-item3-animate-init ,
+.type-img-item4-animate-init {
+	opacity: 0;
+}
+.type-img-item1-animate-down ,
+.type-img-item2-animate-down ,
+.type-img-item3-animate-down ,
+.type-img-item4-animate-down {
+	opacity: 1;
+}
+
+/*第五屏动画*/
+.fifthscreen-heading,
+.fifthscreen-subheading,
+.fifthscreen-bg {
+	transition: all 1s;
+}
+.fifthscreen-heading-animate-init {
+	opacity: 0;
+	transform: translate(0,-100%);
+}
+.fifthscreen-bg-animate-init,
+.fifthscreen-subheading-animate-init {
+	opacity: 0;
+	transform: translate(0,100%);
+}
+
+/*定义帧动画*/
+@keyframes bounce {
+	0%,100% {
+		transform: scale(0);
+	}
+	50% {
+		transform: scale(1);
+	}
+	/*100% {
+		transform: scale(1);
+	}*/
+}
+
+/*使用帧动画*/
+.secondscreen-point-left:after,
+.secondscreen-point-right:after {
+	content: ' ';
+	display: block;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 1px;
+	left: 1px;
+	background-color: rgba(255,0,0,.4);
+	-webkit-animation: bounce 2s infinite;
+	border-radius: 50%;
+}
+.secondscreen-point-desc1:after {
+	left: 200px;
+}
+
+/*导航条 status-back样式*/
+.header {
+	transition: all 1s;
+}
+.header-status-back {
+	background-color: rgba(0,0,0,.5);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 3;
+}
+.header-status-back .header-logo,
+.header-status-back .header-nav-item {
+	color: #fff;
+}
+.header-status-back .header-nav-item-status-active {
+	color: #f01400;
+}
+.header-nav-item-status-active::after {
+	/*content: " ";
+	display: block;
+	width: 100%;
+	height: 2px;
+	position: absolute;
+	background-color: #f01400;
+	left: 0;
+	bottom: 0;*/
+}
+/*大纲status-in样式*/
+.outline {
+	opacity: 0;
+	transition: all 1s;
+	transform: translate(100%,0);
+}
+.outline-status-in {
+	opacity: 1;
+	transform: translate(0,0);
+}
+.outline-item-statue {
+	color: #f01400;
+}
